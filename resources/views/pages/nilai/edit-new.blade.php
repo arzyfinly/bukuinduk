@@ -238,52 +238,53 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                            @if (isset($nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_1_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">PENGETAHUAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_1_b_pengetahuan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_1_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                            @if (isset(
+                                                                    $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_1_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_1_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_1_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">KETERAMPILAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_1_b_keterampilan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_1_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_1_b_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_1_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
                                                             @else
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">PENGETAHUAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_1_b_pengetahuan_{{ $item->nama }}"
-                                                                        value=""
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_1_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">KETERAMPILAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_1_b_keterampilan_{{ $item->nama }}"
-                                                                        value=""
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_1_b_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
                                                             @endif
                                                         @endforeach
                                                     </div>
@@ -346,7 +347,10 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                            @if(isset($nilai['semester_2']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_2_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
+                                                            @if (isset(
+                                                                    $nilai['semester_2']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_2_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
                                                                 <div class="col-6 mt--2 mb-0">
                                                                     <div class="form-group">
                                                                         <label for="agama">PENGETAHUAN
@@ -377,8 +381,7 @@
                                                                         <input type="number" class="form-control"
                                                                             id=""
                                                                             name="sm_2_b_pengetahuan_{{ $item->nama }}"
-                                                                            value=""
-                                                                            placeholder="Input Nilai">
+                                                                            value="" placeholder="Input Nilai">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-6 mt--2 mb-0">
@@ -388,8 +391,7 @@
                                                                         <input type="number" class="form-control"
                                                                             id=""
                                                                             name="sm_2_b_keterampilan_{{ $item->nama }}"
-                                                                            value=""
-                                                                            placeholder="Input Nilai">
+                                                                            value="" placeholder="Input Nilai">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -454,53 +456,54 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                        @if (isset($nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_3_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_3_b_pengetahuan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_3_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_3_b_keterampilan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_3_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @else
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_3_b_pengetahuan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_3_b_keterampilan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @endif
+                                                            @if (isset(
+                                                                    $nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_3_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_3_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_3_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_3_b_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_3']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_3_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @else
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_3_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_3_b_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok Extrakurikuler</b></u>
@@ -562,53 +565,54 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                        @if (isset($nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_4_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">PENGETAHUAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_4_b_pengetahuan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_4_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                            @if (isset(
+                                                                    $nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_4_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_4_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_4_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">KETERAMPILAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_4_b_keterampilan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_4_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_4_b_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_4']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_4_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        @else
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_4_b_pengetahuan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_4_b_keterampilan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @endif
+                                                            @else
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_4_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_4_b_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok Extrakurikuler</b></u>
@@ -645,101 +649,103 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok A</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'A') as $item)
-                                                        @if (isset($nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 2]['sm_5_a_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    name="sm_5_a_pengetahuan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 2]['sm_5_a_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    name="sm_5_a_keterampilan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 1]['sm_5_a_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @else
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    name="sm_5_a_pengetahuan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    name="sm_5_a_keterampilan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @endif
+                                                            @if (isset(
+                                                                    $nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_5_a_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="sm_5_a_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 2]['sm_5_a_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="sm_5_a_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_5']['kel_a'][$loop->iteration + $loop->iteration - 1]['sm_5_a_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @else
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="sm_5_a_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="sm_5_a_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                        @if (isset($nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_5_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">PENGETAHUAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_5_b_pengetahuan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_5_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                            @if (isset(
+                                                                    $nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_5_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_5_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_5_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">KETERAMPILAN
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        id=""
-                                                                        name="sm_5_b_keterampilan_{{ $item->nama }}"
-                                                                        value="{{ $nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_5_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_5_b_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_5']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_5_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        @else
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_5_b_pengetahuan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_5_b_keterampilan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @endif
+                                                            @else
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_5_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_5_b_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok Extrakurikuler</b></u>
@@ -801,53 +807,54 @@
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok B</b></u></h5>
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
-                                                        @if (isset($nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_6_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_6_b_pengetahuan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_6_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_6_b_keterampilan_{{ $item->nama }}"
-                                                                    value="{{ $nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_6_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @else
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">PENGETAHUAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_6_b_pengetahuan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 mt--2 mb-0">
-                                                            <div class="form-group">
-                                                                <label for="agama">KETERAMPILAN
-                                                                    {{ $item->nama }}</label>
-                                                                <input type="number" class="form-control"
-                                                                    id=""
-                                                                    name="sm_6_b_keterampilan_{{ $item->nama }}"
-                                                                    value=""
-                                                                    placeholder="Input Nilai">
-                                                            </div>
-                                                        </div>
-                                                        @endif
+                                                            @if (isset(
+                                                                    $nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 2][
+                                                                        'sm_6_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')
+                                                                    ]))
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_6_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 2]['sm_6_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_6_b_keterampilan_{{ $item->nama }}"
+                                                                            value="{{ $nilai['semester_6']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_6_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @else
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">PENGETAHUAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_6_b_pengetahuan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">KETERAMPILAN
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            id=""
+                                                                            name="sm_6_b_keterampilan_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
+                                                                </div>
+                                                            @endif
                                                         @endforeach
                                                     </div>
                                                     <h5 style="color:rgb(255, 0, 0)"><u><b>Kelompok Extrakurikuler</b></u>
@@ -1090,7 +1097,7 @@
                                                     <hr>
                                                     <h5><u><b>Kelas 7</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-lg-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
@@ -1099,10 +1106,41 @@
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_7"
+                                                                    value="{{ $status_akhir_tahun['tahun_ajaran_kelas_7'] ?? '' }}"
+                                                                    placeholder="Contoh: 2024/2025">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_7"
+                                                                    value="{{ $status_akhir_tahun['tanggal_akhir_tahun_7'] ?? '' }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_7"
+                                                                    id="wali_kelas_7">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}"
+                                                                            {{ $status_akhir_tahun['wali_kelas_7'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <h5><u><b>Kelas 8</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-lg-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
@@ -1111,16 +1149,78 @@
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_8"
+                                                                    value="{{ $status_akhir_tahun['tahun_ajaran_kelas_8'] ?? '' }}"
+                                                                    placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_8"
+                                                                    value="{{ $status_akhir_tahun['tanggal_akhir_tahun_8'] ?? '' }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_8"
+                                                                    id="wali_kelas_8">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}"
+                                                                            {{ $status_akhir_tahun['wali_kelas_8'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <h5><u><b>Kelas 9</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-lg-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
                                                                     name="status_kelas_9"
                                                                     value="{{ $status_akhir_tahun['kelas_9'] }}"
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_9"
+                                                                    value="{{ $status_akhir_tahun['tahun_ajaran_kelas_9'] ?? '' }}"
+                                                                    placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_9"
+                                                                    value="{{ $status_akhir_tahun['tanggal_akhir_tahun_9'] ?? '' }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_9"
+                                                                    id="wali_kelas_9">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}"
+                                                                            {{ $status_akhir_tahun['wali_kelas_9'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1183,27 +1283,26 @@
                                                     <div class="row">
                                                         @foreach ($mapel->where('kelompok', 'B') as $item)
                                                             @if (isset($nilai_ijazah['b'][$loop->iteration - 1]['nilai_ijazah_b_' . str_replace(' ', '_', '' . $item->nama . '')]))
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        name="nilai_ijazah_b_{{ $item->nama }}"
-                                                                        value="{{ $nilai_ijazah['b'][$loop->iteration - 1]['nilai_ijazah_b_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="nilai_ijazah_b_{{ $item->nama }}"
+                                                                            value="{{ $nilai_ijazah['b'][$loop->iteration - 1]['nilai_ijazah_b_' . str_replace(' ', '_', '' . $item->nama . '')] }}"
+                                                                            placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
                                                             @else
-                                                            <div class="col-6 mt--2 mb-0">
-                                                                <div class="form-group">
-                                                                    <label for="agama">
-                                                                        {{ $item->nama }}</label>
-                                                                    <input type="number" class="form-control"
-                                                                        name="nilai_ijazah_b_{{ $item->nama }}"
-                                                                        value=""
-                                                                        placeholder="Input Nilai">
+                                                                <div class="col-6 mt--2 mb-0">
+                                                                    <div class="form-group">
+                                                                        <label for="agama">
+                                                                            {{ $item->nama }}</label>
+                                                                        <input type="number" class="form-control"
+                                                                            name="nilai_ijazah_b_{{ $item->nama }}"
+                                                                            value="" placeholder="Input Nilai">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
                                                             @endif
                                                         @endforeach
                                                     </div>

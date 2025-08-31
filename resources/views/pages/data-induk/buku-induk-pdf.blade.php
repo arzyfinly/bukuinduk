@@ -129,7 +129,8 @@
         </tr>
         <tr>
             <td style="text-align: center">
-                <span style="font-size: 14px;font-weight:700">NOMOR INDUK PESERTA {{ $data->nis }} / {{ $data->nisn }}</span>
+                <span style="font-size: 14px;font-weight:700">NOMOR INDUK PESERTA {{ $data->nis }} /
+                    {{ $data->nisn }}</span>
             </td>
         </tr>
     </table>
@@ -1303,9 +1304,12 @@
             <tr>
                 <td rowspan="6" style="vertical-align: middle;width: 2%;" class="text-center">NO</td>
                 <td style="width: 20%;" class="font-normal-leger">TAHUN PELAJARAN</td>
-                <td class="font-normal-leger text-center" colspan="9">2021/2022</td>
-                <td class="font-normal-leger text-center" colspan="8">2022/2023</td>
-                <td class="font-normal-leger text-center" colspan="8">2023/2024</td>
+                <td class="font-normal-leger text-center" colspan="9">
+                    {{ $status_akhir_tahun['tahun_ajaran_kelas_7'] ?? '20__/20__' }}</td>
+                <td class="font-normal-leger text-center" colspan="8">
+                    {{ $status_akhir_tahun['tahun_ajaran_kelas_8'] ?? '20__/20__' }}</td>
+                <td class="font-normal-leger text-center" colspan="8">
+                    {{ $status_akhir_tahun['tahun_ajaran_kelas_9'] ?? '20__/20__' }}</td>
                 <td class="font-normal-leger text-center" colspan="2">IJAZAH</td>
             </tr>
             <tr>
@@ -1675,7 +1679,7 @@
                 <tr>
                     <td class="font-normal-leger text-center">{{ $loop->iteration }}</td>
                     <td class="font-normal-leger">
-                        @if ($item->nama == "PRAKARYA / TIK")
+                        @if ($item->nama == 'PRAKARYA / TIK')
                             PRAKARYA
                         @else
                             {{ $item->nama }}
@@ -1691,7 +1695,7 @@
                         {{-- {{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 2]['predikat_sm_1_b_pengetahuan_' . str_replace(' ', '_', '' . $item->nama . '')] ?? ''}} --}}
                     </td>
                     <td class="font-normal-leger text-center">
-                        {{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_1_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] ?? ''}}
+                        {{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 1]['sm_1_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] ?? '' }}
                     </td>
                     <td class="font-normal-leger text-center">
                         {{-- {{ $nilai['semester_1']['kel_b'][$loop->iteration + $loop->iteration - 1]['predikat_sm_1_b_keterampilan_' . str_replace(' ', '_', '' . $item->nama . '')] ?? ''}} --}}
@@ -2101,9 +2105,15 @@
         <table style="width: 100%">
             <tr>
                 <td style="width: 30%;text-align: center">MENGETAHUI</td>
-                <td style="width: 20%">Sumenep,</td>
-                <td style="width: 20%">Sumenep,</td>
-                <td>Sumenep,</td>
+                <td style="width: 15%;text-align: center">Sumenep,
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_7'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                </td>
+                <td style="width: 15%;text-align: center">Sumenep,
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_8'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                </td>
+                <td style="width: 15%;text-align: center">Sumenep,
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_9'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                </td>
             </tr>
             <tr>
                 <td style="width: 20%;text-align: center">Kepala SMPN 1 Sumenep</td>
@@ -2113,15 +2123,30 @@
             </tr>
             <tr>
                 <td style="width: 20%;padding-top: 70px;text-align: center"> <u>{{ $config->nama }}</u></td>
-                <td style="padding-top: 70px;">...........................................................</td>
-                <td style="padding-top: 70px;">...........................................................</td>
-                <td style="padding-top: 70px;">...........................................................</td>
+                <td style="padding-top: 70px;width: 15%;text-align: center">
+                    <u>
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'])->nama ?? '...................................................' }}
+                    </u>
+                </td>
+                <td style="padding-top: 70px;width: 15%;text-align: center">
+                    <u>
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'])->nama ?? '...................................................' }}
+                    </u>
+                </td>
+                <td style="padding-top: 70px;width: 15%;text-align: center">
+                    <u>
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'])->nama ?? '...................................................' }}
+                    </u>
+                </td>
             </tr>
             <tr>
                 <td style="width: 20%;text-align: center">{{ $config->jabatan }}<br>NIP. {{ $config->nip }}</td>
-                <td>NIP. </td>
-                <td>NIP. </td>
-                <td>NIP. </td>
+                <td style="width: 15%;text-align: center">NIP.
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'])->nip ?? '' }}</td>
+                <td style="width: 15%;text-align: center">NIP.
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'])->nip ?? '' }}</td>
+                <td style="width: 15%;text-align: center">NIP.
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'])->nip ?? '' }}</td>
             </tr>
         </table>
     @endif

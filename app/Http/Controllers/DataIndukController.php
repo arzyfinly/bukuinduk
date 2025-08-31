@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{DataInduk,Mapel,ConfigKepalaSekolah};
+use App\Models\{DataInduk,Mapel,ConfigKepalaSekolah,DataPegawai};
 use App\Imports\DataIndukImport;
 use Excel;
 use DataTables;
@@ -488,8 +488,9 @@ class DataIndukController extends Controller
     public function createNilai($id){
 
         $mapel = Mapel::all();
+        $guru  = DataPegawai::whereIn('jenis_pns',[1,3,4])->get();
         $data  = DataInduk::find($id);
-        return view('pages.nilai.create-new',compact('mapel','data'));
+        return view('pages.nilai.create-new',compact('mapel','guru','data'));
     }
 
     private function predikat($value){
@@ -633,10 +634,19 @@ class DataIndukController extends Controller
     public function storeStatusAkhirTahun(Request $request, $id){
 
         $status_akhir = [
-            'kelas_7'        => $request->status_kelas_7,
-            'kelas_8'        => $request->status_kelas_8,
-            'kelas_9'        => $request->status_kelas_9,
-            'status_akhir'   => $request->status_akhir
+            'kelas_7'               => $request->status_kelas_7,
+            'tahun_ajaran_kelas_7'  => $request->tahun_ajaran_kelas_7,
+            'tanggal_akhir_tahun_7' => $request->tanggal_akhir_tahun_7,
+            'wali_kelas_7'          => $request->wali_kelas_7,
+            'kelas_8'               => $request->status_kelas_8,
+            'tahun_ajaran_kelas_8'  => $request->tahun_ajaran_kelas_8,
+            'tanggal_akhir_tahun_8' => $request->tanggal_akhir_tahun_8,
+            'wali_kelas_8'          => $request->wali_kelas_8,
+            'kelas_9'               => $request->status_kelas_9,
+            'tahun_ajaran_kelas_9'  => $request->tahun_ajaran_kelas_9,
+            'tanggal_akhir_tahun_9' => $request->tanggal_akhir_tahun_9,
+            'wali_kelas_9'          => $request->wali_kelas_9,
+            'status_akhir'          => $request->status_akhir
         ];
 
         $nilai = json_encode($status_akhir);
@@ -957,13 +967,14 @@ class DataIndukController extends Controller
     public function editNilai($id){
 
         $mapel = Mapel::all();
+        $guru  = DataPegawai::whereIn('jenis_pns',[1,3,4])->get();
         $data  = DataInduk::find($id);
         $nilai = json_decode($data->nilai,true);
         $sikap = json_decode($data->sikap,true);
         $kehadiran = json_decode($data->kehadiran,true);
         $status_akhir_tahun = json_decode($data->status_akhir_tahun,true);
         $nilai_ijazah = json_decode($data->nilai_ijazah,true);
-        return view('pages.nilai.edit-new',compact('mapel','data','nilai','sikap','kehadiran','status_akhir_tahun','nilai_ijazah'));
+        return view('pages.nilai.edit-new',compact('mapel','guru','data','nilai','sikap','kehadiran','status_akhir_tahun','nilai_ijazah'));
     }
 
     public function exportPDF($id){

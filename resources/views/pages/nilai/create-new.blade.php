@@ -906,7 +906,7 @@
                                                     <hr>
                                                     <h5><u><b>Kelas 7</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
@@ -914,10 +914,38 @@
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_7"
+                                                                    placeholder="Contoh: 2024/2025">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_7"
+                                                                    id="wali_kelas_7">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}">
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <h5><u><b>Kelas 8</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
@@ -925,15 +953,71 @@
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_8"
+                                                                    placeholder="Contoh: 2024/2025">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_8">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_8"
+                                                                    id="wali_kelas_8">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}">
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <h5><u><b>Kelas 9</b></u></h5>
                                                     <div class="row">
-                                                        <div class="col-12 mt--2 mb-0">
+                                                        <div class="col-6 mt--2 mb-0">
                                                             <div class="form-group">
                                                                 <label>Naik/Tinggal Kelas</label>
                                                                 <input type="text" class="form-control"
                                                                     name="status_kelas_9"
                                                                     placeholder="Contoh: Naik ke Kelas 8 / Tinggal di Kelas 7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tahun Ajaran</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="tahun_ajaran_kelas_9"
+                                                                    placeholder="Contoh: 2024/2025">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label>Tanggal</label>
+                                                                <input type="date" class="form-control"
+                                                                    name="tanggal_akhir_tahun_9">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 mt--2 mb-0">
+                                                            <div class="form-group">
+                                                                <label for="agama">Wali Kelas</label>
+                                                                <select class="form-control" name="wali_kelas_9"
+                                                                    id="wali_kelas_9">
+                                                                    <option value="">--pilih--</option>
+                                                                    @foreach ($guru as $item)
+                                                                        <option value="{{ $item->id }}">
+                                                                            {{ $item->nama }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
