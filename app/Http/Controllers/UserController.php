@@ -28,8 +28,14 @@ class UserController extends Controller
             ->addColumn('role', function($row){
                 if ($row->role == 1) {
                     return '<span class="badge badge-primary">ADMIN</span>';
-                } else {
+                } elseif ($row->role == 2) {
                     return '<span class="badge badge-warning">GURU</span>';
+                } elseif ($row->role == 3) {
+                    return '<span class="badge badge-warning">KESISWAAN</span>';
+                } elseif ($row->role == 4) {
+                    return '<span class="badge badge-warning">KEPEGAWAIAN</span>';
+                } else {
+                    return '<span class="badge badge-warning">-</span>';
                 }
 
             })

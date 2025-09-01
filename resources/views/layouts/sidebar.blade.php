@@ -10,7 +10,7 @@
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                         <span>
                             {{ auth()->user()->name }}
-                            <span class="user-level">Administrator</span>
+                            {{-- <span class="user-level">Administrator</span> --}}
                         </span>
                     </a>
                     <div class="clearfix"></div>
@@ -30,12 +30,12 @@
                         </span>
                         <h4 class="text-section">Fitur</h4>
                     </li>
-                    <!-- <li class="nav-item{{ request()->is('user*') ? ' active' : '' }}">-->
-                    <!--    <a href="{{ route('user.index') }}">-->
-                    <!--        <i class="fas fa-users"></i>-->
-                    <!--        <p>Manajemen User</p>-->
-                    <!--    </a>-->
-                    <!--</li>-->
+                    <li class="nav-item{{ request()->is('user*') ? ' active' : '' }}">
+                        <a href="{{ route('user.index') }}">
+                            <i class="fas fa-users"></i>
+                            <p>Manajemen User</p>
+                        </a>
+                    </li>
                     <li
                         class="nav-item{{ request()->is('agama*') || request()->is('jenis-pns*') || request()->is('jurusan*') || request()->is('mapel*') || request()->is('jabatan*') ? ' active submenu' : '' }}">
                         <a data-toggle="collapse" href="#master">
@@ -94,15 +94,15 @@
                         </a>
                     </li>
                 @elseif(auth()->user()->role == 3)
-                    <li class="nav-item{{ request()->is('data-induk*') ? ' active' : '' }}">
-                        <a href="{{ route('data-induk.index') }}">
+                    <li class="nav-item{{ request()->is('guest-data-induk*') ? ' active' : '' }}">
+                        <a href="{{ route('guest-data-induk.index') }}">
                             <i class="fas fa-database"></i>
                             <p>Data Induk</p>
                         </a>
                     </li>
                 @elseif(auth()->user()->role == 4)
-                    <li class="nav-item{{ request()->is('data-pegawai*') ? ' active' : '' }}">
-                        <a href="{{ route('data-pegawai.index') }}">
+                    <li class="nav-item{{ request()->is('guest-data-pegawai*') ? ' active' : '' }}">
+                        <a href="{{ route('guest-data-pegawai.index') }}">
                             <i class="fas fa-user-friends"></i>
                             <p>Data Pegawai</p>
                         </a>
@@ -115,35 +115,37 @@
                         </a>
                     </li>
                 @endif
-                <li class="nav-section">
-                    <span class="sidebar-mini-icon">
-                        <i class="fa fa-ellipsis-h"></i>
-                    </span>
-                    <h4 class="text-section">Tambahan</h4>
-                </li>
-                <li
-                    class="nav-item{{ request()->is('company-profiles*') || request()->is('slider*') ? ' active submenu' : '' }}">
-                    <a data-toggle="collapse" href="#setting">
-                        <i class="fas fa-cogs"></i>
-                        <p>Pengaturan</p>
-                        <span class="caret"></span>
-                    </a>
-                    <div class="collapse{{ request()->is('company-profiles*') || request()->is('slider*') ? ' show' : '' }}"
-                        id="setting">
-                        <ul class="nav nav-collapse">
-                            <li class="{{ request()->is('config-kepala-sekolah*') ? 'active' : '' }}">
-                                <a href="{{ route('config-kepala-sekolah.index') }}">
-                                    <span class="sub-item">Config Kepala Sekolah</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <span class="sub-item">Cleaner</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                @if (auth()->user()->role == 1)
+                    <li class="nav-section">
+                        <span class="sidebar-mini-icon">
+                            <i class="fa fa-ellipsis-h"></i>
+                        </span>
+                        <h4 class="text-section">Tambahan</h4>
+                    </li>
+                    <li
+                        class="nav-item{{ request()->is('company-profiles*') || request()->is('slider*') ? ' active submenu' : '' }}">
+                        <a data-toggle="collapse" href="#setting">
+                            <i class="fas fa-cogs"></i>
+                            <p>Pengaturan</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse{{ request()->is('company-profiles*') || request()->is('slider*') ? ' show' : '' }}"
+                            id="setting">
+                            <ul class="nav nav-collapse">
+                                <li class="{{ request()->is('config-kepala-sekolah*') ? 'active' : '' }}">
+                                    <a href="{{ route('config-kepala-sekolah.index') }}">
+                                        <span class="sub-item">Config Kepala Sekolah</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span class="sub-item">Cleaner</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

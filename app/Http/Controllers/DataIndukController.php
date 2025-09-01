@@ -20,7 +20,6 @@ class DataIndukController extends Controller
     }
 
     public function index(Request $request){
-
         $data = DataInduk::all();
         if($request->ajax()){
             return DataTables::of($data)

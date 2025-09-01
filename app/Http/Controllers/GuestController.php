@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{DataInduk,Mapel};
+use App\Models\{DataInduk,Mapel,DataPegawai};
 use DataTables;
 use PDF;
 
@@ -65,5 +65,41 @@ class GuestController extends Controller
         'ket_pendidikan','ayah_kandung','ibu_kandung','wali','kegemaran','ket_pengembangan','ket_selesai_pendidikan','nilai','mapel'));
         $pdf->setPaper(array(0, 0, 841.89, 1190.55), 'landscape');
         return $pdf->stream('buku-induk'.$data_siswa->nama_lengkap.'.pdf');
+    }
+
+    public function dataPegawai(Request $request){
+
+        $data = DataPegawai::all();
+        if($request->ajax()){
+            return DataTables::of($data)
+            ->addColumn('nip', function($row){
+                return $row->nip ;
+            })
+            ->addColumn('nama', function($row){
+                return $row->nama ;
+            })
+            ->addColumn('email', function($row){
+                return $row->email ;
+            })
+            ->addColumn('jenis_kelamin', function($row){
+                return $row->jenis_kelamin ;
+            })
+            ->addColumn('action', function($row){
+                $button  = '';
+                $button .= '&nbsp;&nbsp;';
+                $button .= '<a href="'.route('data-pegawai.single-export',$row->id).'" class="btn btn-sm btn-secondary btn-icon btn-round"><i class="fas fa-print fa-circle mt-2"></i></a>';
+                $button .= '&nbsp;&nbsp;';
+                $button .= '<a href="'.route('data-pegawai.edit',$row->id).'" class="btn btn-sm btn-warning btn-icon btn-round"><i class="fas fa-pen-square fa-circle mt-2"></i></a>';
+
+                $button .= '&nbsp;&nbsp;';
+                $button .= '<button onclick="deleteItem(this)" data-name="'.$row->agama.'" data-id="'.$row->id.'" class="btn btn-sm btn-danger btn-icon btn-round"><i class="fas fa-trash"></i></button>';
+
+                return $button;
+            })
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+        return view('pages.guest.data-pegawai',compact('data'));
     }
 }

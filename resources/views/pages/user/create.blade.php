@@ -94,6 +94,8 @@
                                                 <option value="">--Pilih--</option>
                                                 <option value="1">Admin</option>
                                                 <option value="2">Guru</option>
+                                                <option value="3">Kesiswaan</option>
+                                                <option value="4">Kepegawaian</option>
                                             </select>
                                             @error('role')
                                                 <small class="text-danger" role="alert">

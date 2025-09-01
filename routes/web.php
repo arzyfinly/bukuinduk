@@ -66,3 +66,4 @@ Route::middleware(['admin'])->group(function () {
 //Data Induk untuk Guest
 Route::get('guest-data-induk',                  [GuestController::class,'index'])->name('guest-data-induk.index');
 Route::get('guest-export-pdf/{id}',             [GuestController::class,'exportPDF'])->name('guest-data-induk.export-pdf');
+Route::get('guest-data-pegawai',                [GuestController::class,'dataPegawai'])->name('guest-data-pegawai.index');
