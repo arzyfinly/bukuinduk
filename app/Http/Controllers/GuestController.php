@@ -50,6 +50,7 @@ class GuestController extends Controller
 
         $data                  = DataInduk::find($id);
         $mapel                 = Mapel::all();
+        $config                 = ConfigKepalaSekolah::first();
         $data_siswa            = json_decode($data->data_siswa);
         $tempat_tinggal        = json_decode($data->tempat_tinggal);
         $ket_sehat             = json_decode($data->ket_sehat);
@@ -61,8 +62,12 @@ class GuestController extends Controller
         $ket_pengembangan      = json_decode($data->ket_pengembangan);
         $ket_selesai_pendidikan= json_decode($data->ket_selesai_pendidikan);
         $nilai                 = json_decode($data->nilai,true);
+        $nilai_sikap           = json_decode($data->sikap,true);
+        $kehadiran             = json_decode($data->kehadiran,true);
+        $status_akhir_tahun    = json_decode($data->status_akhir_tahun,true);
+        $nilai_ijazah          = json_decode($data->nilai_ijazah,true);
         $pdf = PDF::loadView('pages.data-induk.buku-induk-pdf', compact('data','data_siswa','tempat_tinggal','ket_sehat',
-        'ket_pendidikan','ayah_kandung','ibu_kandung','wali','kegemaran','ket_pengembangan','ket_selesai_pendidikan','nilai','mapel'));
+        'ket_pendidikan','ayah_kandung','ibu_kandung','wali','kegemaran','ket_pengembangan','ket_selesai_pendidikan','nilai','nilai_sikap','kehadiran','nilai_ijazah','status_akhir_tahun','mapel','config'));
         $pdf->setPaper(array(0, 0, 841.89, 1190.55), 'landscape');
         return $pdf->stream('buku-induk'.$data_siswa->nama_lengkap.'.pdf');
     }
