@@ -94,15 +94,15 @@
                         </a>
                     </li>
                 @elseif(auth()->user()->role == 3)
-                    <li class="nav-item{{ request()->is('guest-data-induk*') ? ' active' : '' }}">
-                        <a href="{{ route('guest-data-induk.index') }}">
+                    <li class="nav-item{{ request()->is('data-induk*') ? ' active' : '' }}">
+                        <a href="{{ route('data-induk.index') }}">
                             <i class="fas fa-database"></i>
                             <p>Data Induk</p>
                         </a>
                     </li>
                 @elseif(auth()->user()->role == 4)
-                    <li class="nav-item{{ request()->is('guest-data-pegawai*') ? ' active' : '' }}">
-                        <a href="{{ route('guest-data-pegawai.index') }}">
+                    <li class="nav-item{{ request()->is('data-pegawai*') ? ' active' : '' }}">
+                        <a href="{{ route('data-pegawai.index') }}">
                             <i class="fas fa-user-friends"></i>
                             <p>Data Pegawai</p>
                         </a>

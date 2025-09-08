@@ -42,6 +42,9 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('jabatan',                  JabatanController::class);
     Route::resource('jurusan',                  JurusanController::class);
     Route::resource('mapel',                    MapelController::class);
+});
+
+Route::middleware(['kesiswaan'])->group(function () {
 
     Route::resource('data-induk',               DataIndukController::class);
     Route::get('insert-nilai/{id}',             [DataIndukController::class,'createNilai'])->name('data-induk.insert-nilai');
@@ -57,11 +60,14 @@ Route::middleware(['admin'])->group(function () {
     Route::post('import-data-induk',            [DataIndukController::class,'importDataInduk'])->name('data-induk.import');
     route::get('download-template',             [DataIndukController::class,'downloadTemplate'])->name('data-induk.download');
     Route::get('export-pdf/{id}',               [DataIndukController::class,'exportPDF'])->name('data-induk.export-pdf');
+});
 
+Route::middleware(['kepegawaian'])->group(function () {
     Route::resource('data-pegawai',             DataPegawaiController::class);
     route::get('export-excel',                  [DataPegawaiController::class,'exportMultipleExcel'])->name('data-pegawai.export-excel');
     route::get('single-export/{id}',            [DataPegawaiController::class,'exportExcel'])->name('data-pegawai.single-export');
 });
+
 
 //Data Induk untuk Guest
 Route::get('guest-data-induk',                  [GuestController::class,'index'])->name('guest-data-induk.index');
