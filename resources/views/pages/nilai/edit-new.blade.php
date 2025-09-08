@@ -1131,7 +1131,7 @@
                                                                     <option value="">--pilih--</option>
                                                                     @foreach ($guru as $item)
                                                                         <option value="{{ $item->id }}"
-                                                                            {{ $status_akhir_tahun['wali_kelas_7'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ ($status_akhir_tahun['wali_kelas_7'] ?? null) == $item->id ? 'selected' : '' }}>
                                                                             {{ $item->nama }}</option>
                                                                     @endforeach
                                                                 </select>
@@ -1174,7 +1174,7 @@
                                                                     <option value="">--pilih--</option>
                                                                     @foreach ($guru as $item)
                                                                         <option value="{{ $item->id }}"
-                                                                            {{ $status_akhir_tahun['wali_kelas_8'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ ($status_akhir_tahun['wali_kelas_8'] ?? null) == $item->id ? 'selected' : '' }}>
                                                                             {{ $item->nama }}</option>
                                                                     @endforeach
                                                                 </select>
@@ -1217,7 +1217,7 @@
                                                                     <option value="">--pilih--</option>
                                                                     @foreach ($guru as $item)
                                                                         <option value="{{ $item->id }}"
-                                                                            {{ $status_akhir_tahun['wali_kelas_9'] == $item->id ? 'selected' : '' }}>
+                                                                            {{ ($status_akhir_tahun['wali_kelas_9'] ?? null) == $item->id ? 'selected' : '' }}>
                                                                             {{ $item->nama }}</option>
                                                                     @endforeach
                                                                 </select>
