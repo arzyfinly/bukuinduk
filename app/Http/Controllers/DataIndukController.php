@@ -980,7 +980,7 @@ class DataIndukController extends Controller
 
         $data                  = DataInduk::find($id);
         $mapel                 = Mapel::all();
-        $config                 = ConfigKepalaSekolah::first();
+        $config                = ConfigKepalaSekolah::first();
         $data_siswa            = json_decode($data->data_siswa);
         $tempat_tinggal        = json_decode($data->tempat_tinggal);
         $ket_sehat             = json_decode($data->ket_sehat);
