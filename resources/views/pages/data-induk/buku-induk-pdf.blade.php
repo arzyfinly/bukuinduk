@@ -2106,13 +2106,16 @@
             <tr>
                 <td style="width: 30%;text-align: center">MENGETAHUI</td>
                 <td style="width: 15%;text-align: center">Sumenep,
-                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_7'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_7'] ?? null)->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{-- {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_7'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }} --}}
                 </td>
                 <td style="width: 15%;text-align: center">Sumenep,
-                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_8'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_8'] ?? null)->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{-- {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_8'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }} --}}
                 </td>
                 <td style="width: 15%;text-align: center">Sumenep,
-                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_9'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_9'] ?? null)->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }}
+                    {{-- {{ \Carbon\Carbon::parse($status_akhir_tahun['tanggal_akhir_tahun_9'])->translatedFormat('d F Y') ?? 'xx Xxxxx 20xx' }} --}}
                 </td>
             </tr>
             <tr>
@@ -2125,28 +2128,31 @@
                 <td style="width: 20%;padding-top: 70px;text-align: center"> <u>{{ $config->nama }}</u></td>
                 <td style="padding-top: 70px;width: 15%;text-align: center">
                     <u>
-                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'])->nama ?? '...................................................' }}
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'] ?? null)->nama ?? '...................................................' }}
+                        {{-- {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'])->nama ?? '...................................................' }} --}}
                     </u>
                 </td>
                 <td style="padding-top: 70px;width: 15%;text-align: center">
                     <u>
-                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'])->nama ?? '...................................................' }}
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'] ?? null)->nama ?? '...................................................' }}
+                        {{-- {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'])->nama ?? '...................................................' }} --}}
                     </u>
                 </td>
                 <td style="padding-top: 70px;width: 15%;text-align: center">
                     <u>
-                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'])->nama ?? '...................................................' }}
+                        {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'] ?? null)->nama ?? '...................................................' }}
+                        {{-- {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'])->nama ?? '...................................................' }} --}}
                     </u>
                 </td>
             </tr>
             <tr>
                 <td style="width: 20%;text-align: center">{{ $config->jabatan }}<br>NIP. {{ $config->nip }}</td>
                 <td style="width: 15%;text-align: center">NIP.
-                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'])->nip ?? '' }}</td>
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_7'] ?? null)->nip ?? '' }}</td>
                 <td style="width: 15%;text-align: center">NIP.
-                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'])->nip ?? '' }}</td>
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_8'] ?? null)->nip ?? '' }}</td>
                 <td style="width: 15%;text-align: center">NIP.
-                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'])->nip ?? '' }}</td>
+                    {{ App\Models\DataPegawai::find($status_akhir_tahun['wali_kelas_9'] ?? null)->nip ?? '' }}</td>
             </tr>
         </table>
     @endif
