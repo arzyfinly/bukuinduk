@@ -122,6 +122,12 @@
                         </span>
                         <h4 class="text-section">Tambahan</h4>
                     </li>
+                    <li class="nav-item{{ request()->is('naik-kelas*') ? ' active' : '' }}">
+                        <a href="{{ route('naik-kelas.index') }}">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>Naik/Pindah Kelas</p>
+                        </a>
+                    </li>
                     <li
                         class="nav-item{{ request()->is('company-profiles*') || request()->is('slider*') ? ' active submenu' : '' }}">
                         <a data-toggle="collapse" href="#setting">

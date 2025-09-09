@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     DataIndukController, AgamaController, JenisPnsController, JabatanController,
     JurusanController, DataPegawaiController, HomeController, ForgotPasswordController,
-    MapelController, UserController, GuestController, ConfigKepalaSekolahController,
+    MapelController, UserController, GuestController, ConfigKepalaSekolahController, NaikKelasController
 };
 
 /*
@@ -42,6 +42,8 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('jabatan',                  JabatanController::class);
     Route::resource('jurusan',                  JurusanController::class);
     Route::resource('mapel',                    MapelController::class);
+    Route::post('naik-kelas',                   [NaikKelasController::class, 'storeNaikKelas'])->name('naik-kelas.store');
+    Route::get('naik-kelas',                    [NaikKelasController::class, 'naikKelas'])->name('naik-kelas.index');
 });
 
 Route::middleware(['kesiswaan'])->group(function () {
