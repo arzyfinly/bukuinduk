@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('nama');
             $table->timestamps();
         });
+        //next jika perlu ada tambahan kurikulum
+        //buat baru tabel kurikulum, lalu tambahkan kurikulum id ke mapel
+        //setiap data induk memiliki id kurikulum sendiri
     }
 
     /**

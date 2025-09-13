@@ -99,8 +99,69 @@
                                     <div class="col-4 mt--2 mb-0">
                                         <div class="form-group">
                                             <label for="kelas">Kelas</label>
-                                            <input type="text" class="form-control" id="kelas" name="kelas"
-                                                value="{{ $data->kelas }}" placeholder="kelas">
+                                            <select name="kelas" id="kelas" class="form-control">
+                                                <option value="">--pilih--</option>
+                                                <option value="Kelas 7-1" @selected($data->kelas == 'Kelas 7-1')>Kelas 7-1
+                                                </option>
+                                                <option value="Kelas 7-2" @selected($data->kelas == 'Kelas 7-2')>Kelas 7-2
+                                                </option>
+                                                <option value="Kelas 7-3" @selected($data->kelas == 'Kelas 7-3')>Kelas 7-3
+                                                </option>
+                                                <option value="Kelas 7-4" @selected($data->kelas == 'Kelas 7-4')>Kelas 7-4
+                                                </option>
+                                                <option value="Kelas 7-5" @selected($data->kelas == 'Kelas 7-5')>Kelas 7-5
+                                                </option>
+                                                <option value="Kelas 7-6" @selected($data->kelas == 'Kelas 7-6')>Kelas 7-6
+                                                </option>
+                                                <option value="Kelas 7-7" @selected($data->kelas == 'Kelas 7-7')>Kelas 7-7
+                                                </option>
+                                                <option value="Kelas 7-8" @selected($data->kelas == 'Kelas 7-8')>Kelas 7-8
+                                                </option>
+                                                <option value="Kelas 7-9" @selected($data->kelas == 'Kelas 7-9')>Kelas 7-9
+                                                </option>
+                                                <option value="Kelas 7-10" @selected($data->kelas == 'Kelas 7-10')>Kelas 7-10
+                                                </option>
+                                                <option value="Kelas 8-1" @selected($data->kelas == 'Kelas 8-1')>Kelas 8-1
+                                                </option>
+                                                <option value="Kelas 8-2" @selected($data->kelas == 'Kelas 8-2')>Kelas 8-2
+                                                </option>
+                                                <option value="Kelas 8-3" @selected($data->kelas == 'Kelas 8-3')>Kelas 8-3
+                                                </option>
+                                                <option value="Kelas 8-4" @selected($data->kelas == 'Kelas 8-4')>Kelas 8-4
+                                                </option>
+                                                <option value="Kelas 8-5" @selected($data->kelas == 'Kelas 8-5')>Kelas 8-5
+                                                </option>
+                                                <option value="Kelas 8-6" @selected($data->kelas == 'Kelas 8-6')>Kelas 8-6
+                                                </option>
+                                                <option value="Kelas 8-7" @selected($data->kelas == 'Kelas 8-7')>Kelas 8-7
+                                                </option>
+                                                <option value="Kelas 8-8" @selected($data->kelas == 'Kelas 8-8')>Kelas 8-8
+                                                </option>
+                                                <option value="Kelas 8-9" @selected($data->kelas == 'Kelas 8-9')>Kelas 8-9
+                                                </option>
+                                                <option value="Kelas 8-10" @selected($data->kelas == 'Kelas 8-10')>Kelas 8-10
+                                                </option>
+                                                <option value="Kelas 9-1" @selected($data->kelas == 'Kelas 9-1')>Kelas 9-1
+                                                </option>
+                                                <option value="Kelas 9-2" @selected($data->kelas == 'Kelas 9-2')>Kelas 9-2
+                                                </option>
+                                                <option value="Kelas 9-3" @selected($data->kelas == 'Kelas 9-3')>Kelas 9-3
+                                                </option>
+                                                <option value="Kelas 9-4" @selected($data->kelas == 'Kelas 9-4')>Kelas 9-4
+                                                </option>
+                                                <option value="Kelas 9-5" @selected($data->kelas == 'Kelas 9-5')>Kelas 9-5
+                                                </option>
+                                                <option value="Kelas 9-6" @selected($data->kelas == 'Kelas 9-6')>Kelas 9-6
+                                                </option>
+                                                <option value="Kelas 9-7" @selected($data->kelas == 'Kelas 9-7')>Kelas 9-7
+                                                </option>
+                                                <option value="Kelas 9-8" @selected($data->kelas == 'Kelas 9-8')>Kelas 9-8
+                                                </option>
+                                                <option value="Kelas 9-9" @selected($data->kelas == 'Kelas 9-9')>Kelas 9-9
+                                                </option>
+                                                <option value="Kelas 9-10" @selected($data->kelas == 'Kelas 9-10')>Kelas 9-10
+                                                </option>
+                                            </select>
                                             @error('kelas')
                                                 <small class="text-danger" role="alert">
                                                     {{ $message }}
@@ -111,8 +172,9 @@
                                     <div class="col-4 mt--2 mb-0">
                                         <div class="form-group">
                                             <label for="agama">Tempat Lahir</label>
-                                            <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir"
-                                                value="{{ $data_siswa->tempat_lahir }}" placeholder="Tempat Lahir">
+                                            <input type="text" class="form-control" id="tempat_lahir"
+                                                name="tempat_lahir" value="{{ $data_siswa->tempat_lahir }}"
+                                                placeholder="Tempat Lahir">
                                             @error('tempat_lahir')
                                                 <small class="text-danger" role="alert">
                                                     {{ $message }}

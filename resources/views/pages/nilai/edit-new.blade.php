@@ -20,7 +20,7 @@
                         <i class="flaticon-right-arrow"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Edit Nilai</a>
+                        <a href="#" class="font-weight-bold">{{ $data->nama }}</a>
                     </li>
                 </ul>
             </div>
@@ -143,8 +143,8 @@
                                                             <div class="form-group">
                                                                 <label for="agama">SIKAP SOSIAL</label>
                                                                 <input type="text" class="form-control"
-                                                                    value="{{ $sikap['sm_4_sosial'] }}" name="sm_4_sosial"
-                                                                    placeholder="Input Nilai">
+                                                                    value="{{ $sikap['sm_4_sosial'] }}"
+                                                                    name="sm_4_sosial" placeholder="Input Nilai">
                                                             </div>
                                                         </div>
                                                     </div>
